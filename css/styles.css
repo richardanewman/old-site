@@ -38,6 +38,7 @@ p {
 }
 
 .top-container {
+  margin: 0 auto;
   background-color: #ebf0f6;
   padding-top: 100px;
   font-family: 'Open Sans', sans-serif;
