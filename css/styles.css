@@ -51,7 +51,7 @@ p {
 .hello{
   display: block;
   margin: 50px auto 0;
-  width: 60%;
+  width: 80%;
   text-align: center;
 }
 
@@ -63,7 +63,7 @@ p {
 .center {
   display: block;
   margin: 30px auto 0 auto;
-  width: 60%;
+  width: 80%;
   text-align: center;
 }
 
@@ -75,7 +75,7 @@ p {
 .profile {
   display: block;
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   text-align: center;
 }
 
@@ -85,17 +85,20 @@ p {
 }
 
 .intro {
-  width: 60%;
+  width: 80%;
   margin: 25px auto 75px;
 }
 
 .skill1 {
   margin: 0 auto;
+  width: 80%;
   padding-top: 30px;
-  width: 60%;
   text-align: left;
 }
 
+.skill-p {
+  padding-top: 25px;
+}
 .passion {
   display: block;
   margin: 0px auto 75px;
@@ -106,27 +109,29 @@ p {
 .skill-img {
   border-radius: 100%;
   float: left;
-  margin-right: 20px;
+  margin-right: 40px;
   margin-bottom: 20px;
   width: 25%;
 }
 
 .skill2 {
-  margin: 75px auto;
-  width: 60%;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 150px;
   text-align: left;
 }
 
 .skill-img2 {
   border-radius: 100%;
   float: right;
-  margin-right: 20px;
+  margin-left: 40px;
   margin-bottom: 20px;
   width: 25%;
 }
 
 .join-me {
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 100px;
 }
 
 .contact-me {
@@ -135,7 +140,7 @@ p {
   padding-top: 30px;
   padding-bottom: 75px;
   text-align: center;
-  width: 60%;
+  width: 80%;
 }
 
 .butn {
