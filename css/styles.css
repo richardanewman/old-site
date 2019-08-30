@@ -1,5 +1,5 @@
 body {
-  display: inline;
+  display: inline-block;
   background-color: #98ccd3;
   margin: 0 auto;
   width: 100%;
@@ -43,10 +43,9 @@ p {
 
 .top-container {
   margin: 0 auto;
+  padding: 100px 0 0 0;
   background-color: #ebf0f6;
-  padding-top: 100px;
   font-family: 'Open Sans', sans-serif;
-  width: 100%
 }
 
 .cloud1 {
@@ -146,6 +145,10 @@ p {
   padding-bottom: 75px;
   text-align: center;
   width: 80%;
+}
+
+.outro {
+  padding: 0 0 30px 0;
 }
 
 .butn {
