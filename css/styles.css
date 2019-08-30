@@ -31,10 +31,10 @@ h3 {
 
 hr {
   border-style: dotted none none none;
-  border-color: #ceddef;
+  border-color: #ebf0f6;
   border-width: 5px;
   margin: 50px auto 50px;
-  width: 5%;
+  width: 15%;
 }
 
 p {
@@ -71,7 +71,7 @@ p {
 .center {
   display: block;
   margin: 30px auto 0 auto;
-  width: 80%;
+  width: 80vw;
   text-align: center;
 }
 
@@ -89,7 +89,7 @@ p {
 
 .profile-img {
   border-radius: 100%;
-  width: 25%;
+  width: 20vw;
 }
 
 .intro {
@@ -118,13 +118,13 @@ p {
   float: left;
   margin-right: 40px;
   margin-bottom: 20px;
-  width: 25%;
+  width: 20vw;
 }
 
 .skill2 {
   margin: 0 auto;
   width: 80%;
-  padding-top: 150px;
+  padding-top: 75px;
   text-align: left;
 }
 
@@ -133,12 +133,12 @@ p {
   float: right;
   margin-left: 40px;
   margin-bottom: 20px;
-  width: 25%;
+  width: 20vw;
 }
 
 .join-me {
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
 }
 
 .contact-me {
@@ -189,7 +189,7 @@ p {
 }
 
 .footer-link {
-  color: #132238;
+  color: #ebf0f6;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   margin: 20px;
