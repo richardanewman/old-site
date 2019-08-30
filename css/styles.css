@@ -2,6 +2,7 @@ body {
   background-color: #98ccd3;
   margin: 0 auto;
   width: 100%;
+  overflow: hidden;
 }
 
 h1 {
@@ -44,6 +45,7 @@ p {
   padding-top: 100px;
   font-family: 'Open Sans', sans-serif;
   width: 100%
+  overflow: hidden;
 }
 
 .cloud1 {
