@@ -205,6 +205,15 @@ p {
   font-size: 0.75rem;
   padding: 20px 0 20px;
 }
+.blog {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+}
+.post-img {
+  width: 80vw;
+}
 
 
 /*navbar*/
