@@ -216,7 +216,8 @@ p {
 }
 .code-block {
   line-height: 100px;
-  font-size: 20px;
+  font-size: .7em;
+  font-weight: bold;
   color: #ebf0f6;
   border-radius: 25px;
   background: #2f425d;
