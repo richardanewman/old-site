@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Richard Newman</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/favicon-3.ico">
@@ -32,6 +32,118 @@
     <img class="center" src="images/peak.png" alt="">
   </div>
   <div class="blog">
+    <h2>Solving Fibonacci Series without Recursion</h2>
+    <p>
+      At Skill Distillery, we end our day with pair programming.  If you’re unfamiliar with pair programming, one person is the “driver” who
+      types the code while the other “navigator” plots the course through the code. We are typically given two or three labs to complete with
+      a random partner.
+    </p>
+    <br>
+    <p>
+      Today we were tasked with FizzBuzz and Fibonacci Series. After 8 hours of coding, everyone was pretty fried. But we all pushed on. My
+      partner and I sat down and cruised through FizzBuzz but had to break out the whiteboard for Fibonacci. We had to complete it without
+      using recursion. I was vaguely familiar with recursion—meaning I had seen an example of someone else solving Fibonacci Series with
+      recursion on stack overflow. But I had long forgotten how to even write the method. So, we were left to our own fried brains on figuring
+      out how to find an iterative algorithm that would print the first 20 numbers in the Fibonnaci Series, and just to make it more interesting,
+      we had to modify our solution to print out the sequence numbers next to the fibonacci value.
+    </p>
+    <br>
+    <p>
+      Below you will find an image of our program from today’s class. On the right side of the image you will find the output. The number on
+      the left is the sequence number and fibonacci is on the right. It is definitely not the most efficient solution but it gets the job done.
+      Farther down I will explain a few lines that stood out during our exercise and then rewrite the entire program into an easier to understand
+      version.
+    </p>
+    <br>
+    <img class="post-img" src="images/fib1.png" alt="">
+    <p>
+      If this concept is completely new to you, the Fibonacci Series is formed by adding the last two numbers to create the next number in the
+      series. The series starts with 0 and 1. So, the third Fibonacci number is (0 + 1) = 1. The next is (1 + 1) = 2. Then (1 + 2) = 3 and so on.
+      <br>
+      <p>
+      0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765…
+      </p>
+      <br>
+      <p>
+      In the image above, the first two print statements on lines 9 and 10, simply print the sequence numbers 0 and 1 and the fibonacci numbers
+      0 and 1. On line 10, we had to add a pre-increment to i to keep the sequence formatting in order since we would only be looping through
+      the if statement once.
+    </p>
+    <br>
+    <p>
+      We quickly ran into a problem that had been mentioned during class but quickly forgotten among the vast amount of information given over
+      the week. This is an intense bootcamp and the firehose analogy rings true. Our problem was on the same line 10. L + 1 was concatenating
+      like a string (see below). We recognized the concatenation right away but had to be reminded about the reason behind the behavior. So, if
+      you’re new to programming, it’s because Java reads the print statement from left to right and when it encounters a String it interprets
+      the integers following the String as more of the same. Weird, right? So, you need to remind Java that you’re still treating integers as
+      integers by putting them into parentheses.
+    </p>
+    <img class="post-img" src="images/fibstring.png" alt="">
+    <br>
+    <p>
+      Admittedly, our name selection on the integers was not the best. Instead of J, K, and L, we should have called them fib1, fib2, and
+      nextfib. If you remember, we are adding the last two fibonacci numbers in order to get the next fibonacci number. I have rewritten the
+      code to reflect the changes. Eventually I’ll write this all into a method that takes user input and share those changes as well.
+    </p>
+    <img class="post-img" src="images/fib2.png" alt="">
+    <br>
+    <p>
+      Now that we have renamed the integers and it’s easier to read, let’s quickly go over the few lines that writes this series.
+    </p>
+    <p>
+      As stated above, we get the next fibonacci number by adding the last two fibonacci numbers. Line 13 does this by assigning the sum of
+      fib1 and fib2 to nextFib. That is the meat of this process but the real magic is on line 15 and 16 after printing out nextFib on line 14.
+    </p>
+    <br>
+    <p>
+      Note: the i + 1 on line 14 is there just to keep the sequence count in order.
+      </p>
+    <br>
+    <p>
+    Line 14 executes and prints 2: 1. Then we reassign variables on 15 and 16.
+    </p>
+    <br>
+    <p>
+    So when lines 15 and 16 execute for the first time fib1 is equal to 1, fib2 is equal to 1, and nextFib is equal to 1.
+    </p>
+    <br>
+    <p>
+    We enter the loop again at line 7, Java checks the if and its value is false, so it moves down to line 11 and runs the code. Now nextFib
+    equals 2 because that’s the current sum fib1 + fib2. Remember Java assigns the value of everything to the right of the equal sign to the
+    variable on the left.
+    </p>
+    <br>
+    <p>
+    Program prints 3: 2 and moves back down to 15 and 16.
+    </p>
+    <br>
+    <p>
+    Now fib1 equals 1 because fib2’s value was still 1.
+    But fib2 now equals 2 because it was assigned the value of nextFib.
+    </p>
+    <br>
+    <p>
+    The code runs back up to the top of the loop, iterates i, checks the IF statement which will always be false, falls through the IF
+    statement back down to line 11 and runs the code again.
+    </p>
+    <p>
+    Now fib1 + fib2 equals 3, so nextFib is now 3. We print out 4: 3 and run lines 15 and 16 again.
+    </p>
+    <br>
+    <p>
+    fib1 gets fib2’s value of 2. fib2 gets the value of 3 from nextFib and it’s back to the top of the loop again. Integer i iterates, and
+    it fall through the IF down to line 13 again. 2 + 3 is 5, so nextFib is now 5 and 5: 5 is printed.
+    </p>
+    <br>
+    <p>
+    fib1 gets the value of 3 from fib2 and fib2 takes the value of 5 from nextFib.
+    </p>
+    <br>
+    <p>
+    This is process happens over and over until our exit condition is complete. Hope this explanation helps. Shoot me an email if you have
+    a question or any feedback. Happy coding! 12 September 2019
+    </p>
+    <hr>
     <h2>23:20</h2>
       <p>It’s 23:20 as I type this blog. If you’re unfamiliar with “military” time like most Americans, 23:20 is simply 11:20pm. Europeans
         and I assume virtually everyone else around the world are familiar with the 24 hour clock. It’s not “military” time in other
