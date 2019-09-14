@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,19 +10,19 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Great+Vibes" rel="stylesheet">
   <script src="https://kit.fontawesome.com/f33aa8216c.js"></script>
   <nav class="navbar">
-          <span class="navbar-toggle" id="js-navbar-toggle">
-              <i class="fas fa-bars"></i>
-          </span>
-          <a href="https://richardanewman.github.io" class="logo"></a>
-          <ul class="main-nav" id="js-menu">
-              <li>
-                  <a href="https://richardanewman.github.io" class="nav-links">Home</a>
-              </li>
-              <li>
-                  <a href="https://richardanewman.github.io/blog" class="nav-links">Blog</a>
-              </li>
-          </ul>
-      </nav>
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
+    <a href="https://richardanewman.github.io" class="logo"></a>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="https://richardanewman.github.io" class="nav-links">Home</a>
+      </li>
+      <li>
+        <a href="https://richardanewman.github.io/blog" class="nav-links">Blog</a>
+      </li>
+    </ul>
+  </nav>
 </head>
 
 <body>
@@ -32,9 +33,38 @@
     <img class="center" src="images/peak.png" alt="">
   </div>
   <div class="blog">
+    <h2>A Better Fibonacci Series without Recursion</h2>
+
+    <p>It’s amazing how much you can learn from a full day of coding in the classroom, and I am not referring to a two hour college course. Our bootcamp
+      is an 8-to-9 hour day of learning and coding—and that does not include an hour for lunch. Skill Distillery was definitely the right choice.
+      The instructors are industry veterans with decades of experience and knowledge. Old school programmers who aren't teaching you how to be a
+      "package programmer", i.e. just download everything from npm and slapped it together. Don't get me wrong; npm can be a great resource but programming is so much more.
+      You need to know the fundamentals first. You should know how the hardware stores data into memory and the limits of primitives.
+      It's so important to know that a byte holding a value of 127 will flip to -128 if you try to increment it one more time, or that an integer
+      will do the same when it reaches a value of 2,147,483,647. Try adding 1 to that value and Java will give you -2147483648. Knowing binary and how to count
+      in binary is also vital to your success. Spending 8 hours on Numerial Systems and Data Types in Java brought much needed clarity to my own development
+      as a programmer, and we only scratched the surface.
+    </p>
+    <p>
+      After today, yesterday’s code looks so ugly, as well. On one hand, I’m happy that we managed to produce a working program without using any outside
+      resources, i.e. stack overflow or google. But on the other hand, just look at the code in yesterday’s post and then look at the image directly
+      below. Our first attempt at Fibonnaci Series looks atrocious. It seems so simple in hindsight. But I guess that’s part of the learning process.
+    </p>
+    <p>
+      Note: we were advised to rewrite Fibonacci Series, along with other algorithms, many times over the next four months and beyond. Simply sit down
+      and rewrite each program without referring to any old versions or outside resources. I think this will be great practice.
+    </p>
+    <p>
+      Below you will find a much cleaner and more succinct version of the Fibonacci Series with a simple iterative algorithm. The code below was produced
+      in class by our instructor.</p>
+    <br>
+    <img class="post-img" src="images/newFib.png" alt="">
+    <br>
+    ABC—Always Be Coding! 13 September 2019
+    <hr>
     <h2>Solving Fibonacci Series without Recursion</h2>
     <p>
-      At Skill Distillery, we end our day with pair programming.  If you’re unfamiliar with pair programming, one person is the “driver” who
+      At Skill Distillery, we end our day with pair programming. If you’re unfamiliar with pair programming, one person is the “driver” who
       types the code while the other “navigator” plots the course through the code. We are typically given two or three labs to complete with
       a random partner.
     </p>
@@ -60,98 +90,98 @@
       series. The series starts with 0 and 1. So, the third Fibonacci number is (0 + 1) = 1. The next is (1 + 1) = 2. Then (1 + 2) = 3 and so on.
       <br>
       <p>
-      0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765…
+        0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765…
       </p>
       <br>
       <p>
-      In the image above, the first two print statements on lines 9 and 10, simply print the sequence numbers 0 and 1 and the fibonacci numbers
-      0 and 1. On line 10, we had to add a pre-increment to i to keep the sequence formatting in order since we would only be looping through
-      the if statement once.
-    </p>
-    <br>
-    <p>
-      Next we ran into a problem that had been mentioned during class but quickly forgotten among the vast amount of information given over
-      the week. This is an intense bootcamp and the firehose analogy rings true. Our problem was on the same line 10. L + 1 was concatenating
-      like a string (see below). We recognized the concatenation right away but had to be reminded about the reason behind the behavior. So, if
-      you’re new to programming, it’s because Java reads the print statement from left to right and when it encounters a String it interprets
-      the integers following the String as more of the same. Weird, right? So, you need to remind Java that you’re still treating integers as
-      integers by putting them into parentheses.
-    </p>
-    <img class="post-img" src="images/fibstring.png" alt="">
-    <br>
-    <p>
-      Admittedly, our name selection on the integers was not the best. Instead of J, K, and L, we should have called them fib1, fib2, and
-      nextfib. If you remember, we are adding the last two fibonacci numbers in order to get the next fibonacci number. I have rewritten the
-      code to reflect the changes. Eventually I’ll write this all into a method that takes user input and share those changes as well.
-    </p>
-    <img class="post-img" src="images/fib2.png" alt="">
-    <br>
-    <p>
-      Now that we have renamed the integers and it’s easier to read, let’s quickly go over the few lines that writes this series.
-    </p>
-    <p>
-      As stated above, we get the next fibonacci number by adding the last two fibonacci numbers. Line 13 does this by assigning the sum of
-      fib1 and fib2 to nextFib. That is the meat of this process but the real magic is on line 15 and 16 after printing out nextFib on line 14.
-    </p>
-    <br>
-    <p>
-      Note: the i + 1 on line 14 is there just to keep the sequence count in order.
+        In the image above, the first two print statements on lines 9 and 10, simply print the sequence numbers 0 and 1 and the fibonacci numbers
+        0 and 1. On line 10, we had to add a pre-increment to i to keep the sequence formatting in order since we would only be looping through
+        the if statement once.
       </p>
-    <br>
-    <p>
-    Line 14 executes and prints 2: 1. Then we reassign variables on 15 and 16.
-    </p>
-    <br>
-    <p>
-    So when lines 15 and 16 execute for the first time fib1 is equal to 1, fib2 is equal to 1, and nextFib is equal to 1.
-    </p>
-    <br>
-    <p>
-    We enter the loop again at line 7, Java checks the if and its value is false, so it moves down to line 11 and runs the code. Now nextFib
-    equals 2 because that’s the current sum fib1 + fib2. Remember Java assigns the value of everything to the right of the equal sign to the
-    variable on the left.
-    </p>
-    <br>
-    <p>
-    Program prints 3: 2 and moves back down to 15 and 16.
-    </p>
-    <br>
-    <p>
-    Now fib1 equals 1 because fib2’s value was still 1.
-    But fib2 now equals 2 because it was assigned the value of nextFib.
-    </p>
-    <br>
-    <p>
-    The code runs back up to the top of the loop, iterates i, checks the IF statement which will always be false, falls through the IF
-    statement back down to line 11 and runs the code again.
-    </p>
-    <p>
-    Now fib1 + fib2 equals 3, so nextFib is now 3. We print out 4: 3 and run lines 15 and 16 again.
-    </p>
-    <br>
-    <p>
-    fib1 gets fib2’s value of 2. fib2 gets the value of 3 from nextFib and it’s back to the top of the loop again. Integer i iterates, and
-    it fall through the IF down to line 13 again. 2 + 3 is 5, so nextFib is now 5 and 5: 5 is printed.
-    </p>
-    <br>
-    <p>
-    fib1 gets the value of 3 from fib2 and fib2 takes the value of 5 from nextFib.
-    </p>
-    <br>
-    <p>
-    This is process happens over and over until our exit condition is complete. Hope this explanation helps! If you would like to
-    step through this code line by line so you watch it execute, please head to over to this <a href="http://bit.do/javatutor">Java Tutor</a> by pythontutor.com. Shoot me an email if you have
-    a question or any feedback. Happy coding! 12 September 2019
-    </p>
-    <hr>
-    <h2>23:20</h2>
-      <p>It’s 23:20 as I type this blog. If you’re unfamiliar with “military” time like most Americans, 23:20 is simply 11:20pm. Europeans
-        and I assume virtually everyone else around the world are familiar with the 24 hour clock. It’s not “military” time in other
-        countries but rather the hours of the day. The reasons behind our decision to start the count over after noon is another article altogether.</p>
+      <br>
+      <p>
+        Next we ran into a problem that had been mentioned during class but quickly forgotten among the vast amount of information given over
+        the week. This is an intense bootcamp and the firehose analogy rings true. Our problem was on the same line 10. L + 1 was concatenating
+        like a string (see below). We recognized the concatenation right away but had to be reminded about the reason behind the behavior. So, if
+        you’re new to programming, it’s because Java reads the print statement from left to right and when it encounters a String it interprets
+        the integers following the String as more of the same. Weird, right? So, you need to remind Java that you’re still treating integers as
+        integers by putting them into parentheses.
+      </p>
+      <img class="post-img" src="images/fibstring.png" alt="">
+      <b>
+        <p>
+          Admittedly, our name selection on the integers was not the best. Instead of J, K, and L, we should have called them fib1, fib2, and
+          nextfib. If you remember, we are adding the last two fibonacci numbers in order to get the next fibonacci number. I have rewritten the
+          code to reflect the changes. Eventually I’ll write this all into a method that takes user input and share those changes as well.
+        </p>
+        <img class="post-img" src="images/fib2.png" alt="">
+        <br>
+        <p>
+          Now that we have renamed the integers and it’s easier to read, let’s quickly go over the few lines that writes this series.
+        </p>
+        <p>
+          As stated above, we get the next fibonacci number by adding the last two fibonacci numbers. Line 13 does this by assigning the sum of
+          fib1 and fib2 to nextFib. That is the meat of this process but the real magic is on line 15 and 16 after printing out nextFib on line 14.
+        </p>
+        <br>
+        <p>
+          Note: the i + 1 on line 14 is there just to keep the sequence count in order.
+        </p>
+        <br>
+        <p>
+          Line 14 executes and prints 2: 1. Then we reassign variables on 15 and 16.
+        </p>
+        <br>
+        <p>
+          So when lines 15 and 16 execute for the first time fib1 is equal to 1, fib2 is equal to 1, and nextFib is equal to 1.
+        </p>
+        <br>
+        <p>
+          We enter the loop again at line 7, Java checks the if and its value is false, so it moves down to line 11 and runs the code. Now nextFib
+          equals 2 because that’s the current sum fib1 + fib2. Remember Java assigns the value of everything to the right of the equal sign to the
+          variable on the left.
+        </p>
+        <br>
+        <p>
+          Program prints 3: 2 and moves back down to 15 and 16.
+        </p>
+        <br>
+        <p>
+          Now fib1 equals 1 because fib2’s value was still 1.
+          But fib2 now equals 2 because it was assigned the value of nextFib.
+        </p>
+        <br>
+        <p>
+          The code runs back up to the top of the loop, iterates i, checks the IF statement which will always be false, falls through the IF
+          statement back down to line 11 and runs the code again.
+        </p>
+        <p>
+          Now fib1 + fib2 equals 3, so nextFib is now 3. We print out 4: 3 and run lines 15 and 16 again.
+        </p>
+        <br>
+        <p>
+          fib1 gets fib2’s value of 2. fib2 gets the value of 3 from nextFib and it’s back to the top of the loop again. Integer i iterates, and
+          it fall through the IF down to line 13 again. 2 + 3 is 5, so nextFib is now 5 and 5: 5 is printed.
+        </p>
+        <br>
+        <p>
+          fib1 gets the value of 3 from fib2 and fib2 takes the value of 5 from nextFib.
+        </p>
+        <br>
+        <p>
+          This is process happens over and over until our exit condition is complete. Hope this explanation helps! If you would like to
+          step through this code line by line so you watch it execute, please head to over to this <a href="http://bit.do/javatutor">Java Tutor</a> by pythontutor.com. Shoot me an email if you have
+          a question or any feedback. Happy coding! 12 September 2019
+        </p>
+        <hr>
+        <h2>23:20</h2>
+        <p>It’s 23:20 as I type this blog. If you’re unfamiliar with “military” time like most Americans, 23:20 is simply 11:20pm. Europeans
+          and I assume virtually everyone else around the world are familiar with the 24 hour clock. It’s not “military” time in other
+          countries but rather the hours of the day. The reasons behind our decision to start the count over after noon is another article altogether.</p>
         <br>
         <p>There is no confusion with the 24 hour clock—if you are acquainted with it. After 12 noon, you simply continue counting: 13, 14, and so on.
           Moreover, if you are used to the 24 hour clock, having to deal with AM and PM can be even more confusing. You don’t have to ask your friend to clarify,
-        “did you mean that you want to meet at 9am or 9pm?” It is 9 or 21. It is simple and it’s clear—just like a ternary conditional operator. </p>
+          “did you mean that you want to meet at 9am or 9pm?” It is 9 or 21. It is simple and it’s clear—just like a ternary conditional operator. </p>
         <br>
         <p class="code-block">booleanExpression ? valueIfTrue : valueIfFalse</p>
         <br>
@@ -159,20 +189,20 @@
           If you’re not familiar with using a 24 hour clock, it can be confusing. You have to start doing all the math in your head to figure
           out that 21 is really 9pm. You are not accustomed to associating 21 with your nightly routine or your favorite sitcom. It’s unfamiliar
           and confusing just like a ternary operator to someone who rarely uses it or comes across it in their daily work. </p>
-          <br>
-          <img class="post-img "src="images/ternary.png" alt="">
-          <br>
-          <p>But I like it. It’s simple and elegant. But if overused, it can genuinely be confusing and hard to debug. For short expressions or
-            to bring much needed clarity to a short IF/ELSE, I say go for the ternary operator. Embrace it early in your learning, and it won’t
-            feel so clumsy later in your career—like a 24 hour clock. 11 September 2019</p>
-    <hr>
-    <h2>Blogging Is Hard</h2>
-      <p>My hat is off to all the full time bloggers. It's tough to write quality content, especially quality content that people actually want
-        to read. I've been trying to come up with a topic all day. Once again, it’s 10:40pm and all you get is a blog post about my lack of
-        creativity on creating a blog post. I would prefer to write a well thought out and thoroughly researched post related to today’s
-        activities in class, but we are still reviewing java fundamentals and posts on fundamentals are a dime a dozen. Nevertheless,
-        I will leave you with a short (and I mean short) reminder on IF/ELSE vs ELSE IF statements just in case someone new to programming
-        has somehow-miraculously-found their way to this blog. </p>
+        <br>
+        <img class="post-img " src="images/ternary.png" alt="">
+        <br>
+        <p>But I like it. It’s simple and elegant. But if overused, it can genuinely be confusing and hard to debug. For short expressions or
+          to bring much needed clarity to a short IF/ELSE, I say go for the ternary operator. Embrace it early in your learning, and it won’t
+          feel so clumsy later in your career—like a 24 hour clock. 11 September 2019</p>
+        <hr>
+        <h2>Blogging Is Hard</h2>
+        <p>My hat is off to all the full time bloggers. It's tough to write quality content, especially quality content that people actually want
+          to read. I've been trying to come up with a topic all day. Once again, it’s 10:40pm and all you get is a blog post about my lack of
+          creativity on creating a blog post. I would prefer to write a well thought out and thoroughly researched post related to today’s
+          activities in class, but we are still reviewing java fundamentals and posts on fundamentals are a dime a dozen. Nevertheless,
+          I will leave you with a short (and I mean short) reminder on IF/ELSE vs ELSE IF statements just in case someone new to programming
+          has somehow-miraculously-found their way to this blog. </p>
         <br>
         <img class="post-img" src="images/if-else.png" alt="">
         <br>
@@ -189,26 +219,26 @@
         <br>
         <img class="post-img" src="images/else-if.png" alt="">
 
-    <hr>
-    <h2>First Step</h2>
-      <p>Day 1 is officially over. It's nearly midnight (10:24pm to be exact), and I've been up since 6 this morning.
-       If this was any other line of work, I'd probably be exhausted. But I'm not even tired.
-       In fact, I'm excited and already looking forward to class in the morning. Granted I will
-       probably have to switch my blogging times to the morning or midday because trying to
-       squeeze in a recap on the day while your two year old daughter is slamming her baby shark toy
-       against the coffee table just doesn't work. But I love little noise machine.</p>
-      <br />
-      <p>Overall, today was probably the easiest day of the course. The instructors made it clear that each day will get progressively harder going forward.
-       Skill Distillery may in fact be the most intense bootcamp out there, especially for enterprise developers. Five weeks from now, we will be taking four prep tests
-       to gauge our ability to sit for Oracle's OCP exam. I'm told that's equivalent to cramming 2-3 years of programming into 5 weeks. Firehose, anyone?
-       But that's exciting to me and more proof that I'm on the right path.
-       </p>
-      <br />
-      <p>So, first day is done, and so is this blog post. I don't plan to continue in this fashion but wanted to stick to the plan:
-        at least one git push to the blog daily, even if it's only a small update. I'd like to start writing more technical posts, but
-        I will do that once I finish setting up this blog to post a little more dynamically. 9 September 2019
+        <hr>
+        <h2>First Step</h2>
+        <p>Day 1 is officially over. It's nearly midnight (10:24pm to be exact), and I've been up since 6 this morning.
+          If this was any other line of work, I'd probably be exhausted. But I'm not even tired.
+          In fact, I'm excited and already looking forward to class in the morning. Granted I will
+          probably have to switch my blogging times to the morning or midday because trying to
+          squeeze in a recap on the day while your two year old daughter is slamming her baby shark toy
+          against the coffee table just doesn't work. But I love little noise machine.</p>
+        <br />
+        <p>Overall, today was probably the easiest day of the course. The instructors made it clear that each day will get progressively harder going forward.
+          Skill Distillery may in fact be the most intense bootcamp out there, especially for enterprise developers. Five weeks from now, we will be taking four prep tests
+          to gauge our ability to sit for Oracle's OCP exam. I'm told that's equivalent to cramming 2-3 years of programming into 5 weeks. Firehose, anyone?
+          But that's exciting to me and more proof that I'm on the right path.
+        </p>
+        <br />
+        <p>So, first day is done, and so is this blog post. I don't plan to continue in this fashion but wanted to stick to the plan:
+          at least one git push to the blog daily, even if it's only a small update. I'd like to start writing more technical posts, but
+          I will do that once I finish setting up this blog to post a little more dynamically. 9 September 2019
 
-      </p>
+        </p>
 
 
   </div>
@@ -217,7 +247,7 @@
     <a class="footer-link" href="https://github.com/richardanewman" target="_blank">Github</a>
     <p class="copyright">© 2019 Richard Newman</p>
   </div>
-<script src="js/main.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
 </body>
 
 </html>
