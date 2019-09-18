@@ -33,6 +33,42 @@
     <img class="center" src="images/peak.png" alt="">
   </div>
   <div class="blog">
+    <h2>Get WET First, Then DRY Your Code</h2>
+    <p>
+      You hear it all the time: “Don’t Repeat Yourself!” But when we are first learning to code, repetition is key. We need to write the same
+      types of code dozens and dozens if not hundreds and thousands of times. We need to practice our if statements and for loops. We need to
+      skip the enhanced for loops until the “old fashioned” for loops are second nature. We need to type each character of “System.out.println( );”
+      and “public static void main(String[] args)” until our dreams start in the ‘main’. Get WET! Write Everything Twice. Or better yet, Write
+      Everything a Thousand Times-WETT! I know I need the practice. We should all get WET before we decide it’s time to get DRY.
+    </p>
+    <p>
+      Breaking your code is important, too. It’s how we learn best. I don’t think there should be any shame in “failing”. Failing is precisely how we
+      learn. If it was easy, chances are you didn’t learn much at all.
+    </p>
+    <p>
+      But with all that said, eventually, we should learn to refactor our code. We should clean house a bit. In just over a week at Skill Distillery,
+      the instructors have already shown us how to recognize code that has too much repetition. Today we refactored a portion of our code to make it DRY,
+      and I would like to share that example with you.
+    </p>
+    <p>
+      In the image below, you will find two methods taken from a name generator. The first method generates a new first name from an array of names based
+      on characters in the user’s name. The second method does virtually the same exact thing but has a few different variable names and iterates over a
+      different array.
+    </p>
+    <img class="post-img" src="images/wet.png" alt="">
+    <p>
+      Given the almost identical behavior of these two methods, we can make a strong case for using DRY in this instance. Below you will find the refactored
+      code. We combined methods to make one single method called “chooseName” which takes two parameters. We pass in either the user’s first name or last name,
+      along with the appropriate array needed to generate a new name instead of separating the two methods and performing the same work.
+    </p>
+    <img class="post-img" src="images/dry.png" alt="">
+    <p>
+      Today was a prime example of getting WET before you get DRY. We wrote the same method twice, then refactored it into a single method. But learning how to
+      write methods and learning how to recognize WET code was purposely built into our lesson today, and I’m a better developer because of it.
+    </p>
+    <p>
+      ABC! 17 September 2019
+    </p>
     <h2>Week 1</h2>
     <p>Week 1 at Skill Distillery officially ended yesterday at 15:27 MDT when I pushed my final commit up to Github. Every weekend we are
       tasked with completing an independent project and pushing it to a repository for grading. We receive either a 1 or 0. You get a 1 if
