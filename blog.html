@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Richard Newman</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link href="css/prism.css" rel="stylesheet" />
   <link rel="icon" href="images/favicon-3.ico">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Great+Vibes" rel="stylesheet">
   <script src="https://kit.fontawesome.com/f33aa8216c.js"></script>
@@ -33,6 +34,102 @@
     <img class="center" src="images/peak.png" alt="">
   </div>
   <div class="blog">
+    <h2>Adding Code Snippets to Your Blog with Prism.js</h2>
+    <p>
+      It's finally time to add code snippet functionality to this blog. In fact, the next series of posts will be on improving this blog. I just couldn't
+      take it anymore. The limitations of this blog were making me dread the writing process. So it was time to meet the challenges head on and without
+      further ado:
+    </p>
+    <pre class="language-java line-numbers">
+      <code>
+      public class HelloWorld {
+
+	      public static void main(String[] args) {
+
+		      System.out.println("Hello, World!");
+		      System.out.println("This is my first code snippet.");
+
+	      }
+
+      }
+      </code>
+    </pre>
+    <p>
+      As you can see above, I have a java code snippet. Unlike the screenshots below, you can copy and past this code and if it was longer or being viewed
+      on a mobile device, you would be able to scroll up and down or left and right within the code block. So how did I achieve this functionality?
+      Like many other sites on the web, I decided to use Prism.js. It very easy to set up and use. To get started head over to
+      <a href="https://prismjs.com/index.html" target="_blank">Prism.js</a>. Once you load their home page, you can sample their themes and read about
+      their features. I used their Tomorrow Night theme for the snippet above.
+    </p>
+    <p>
+      To implement this on your own blog, you will need to download a custom <code class="language-javascript">.js</code> file and a <code class="language-css">css</code>
+      file and add them to your appropriate directory. To build a custom file, click on the download button found on Prism's home page. This will take you to
+      another page where you can select from the languages you will be using in your code snippets. At the bottom of the downloand page you will also find
+      plugin options. I tried out a few but only added the line number plugin. Once you have made your language selections and added any additional plugins,
+      click on the download js and download css buttons found just below the code block. These buttons will download your custom files. Then simply move
+      those files to your website's css directory and js directory.
+    </p>
+    <p>
+      After you have downloaded the files and moved them to your website's appropriate directories, you will need to add the following lines of code to
+      the pages appropriate pages on your website. I only use code snippets on my blog, so I just added it to my blog.html file. Before the
+      <code class="language-markup">&lt;/head&gt;</code> of your website, you will need to add the following:
+    </p>
+    <pre class="language-markup line-numbers">
+      <code>&lt;head&gt;
+
+      &lt;link href=&quot;css/prism.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+      &lt;/head&gt;
+      </code>
+    </pre>
+    <p>
+      And before the end of your <code class="language-markup"> &lt;/body&gt; </code>, you will need to add:
+    </p>
+    <pre class="language-markup line-numbers" data-start="90">
+      <code>&lt;body&gt;
+
+
+
+      &lt;script src=&quot;js/prism.js&quot;&gt;&lt;/script&gt;
+      &lt;/body&gt;
+      </code>
+    </pre>
+    <p>
+      Once you have completed those steps, you will want to add your first code snippet. To do so, you will need to surround your code with special html tags <code class="language-markup">&lt;pre&gt;
+      &lt;code&gt; &lt;/code&gt; &lt;/pre&gt;</code>. My previous HelloWorld java code snippet, looks like this in html:
+    </p>
+    <pre class="language-markup line-numbers" data-start="52">
+      <code>
+        &lt;pre class=&quot;language-java line-numbers&quot;&gt;
+        &lt;code&gt;
+        public class HelloWorld {
+
+  	      public static void main(String[] args) {
+
+  		      System.out.println(&quot;Hello, World!&quot;);
+  		      System.out.println(&quot;This is my first code snippet.&quot;);
+
+  	      }
+
+        }
+        &lt;/code&gt;
+      &lt;/pre&gt;
+      </code>
+    </pre>
+    <p>
+      And in order to create a code snippet using a markup language you will need to use a <a href="https://accessify.com/tools-and-wizards/developer-tools/quick-escape/" target="_blank">quick escape tool</a>
+      to convert your html to escaped characters. In the screenshot below, you can see an example of the escaped characters I had to use in order to display the html used in how to write
+      the java code snippet example directly above. Hope that is not too confusing or on the verge of becoming meta. The escaped characters are necessary because your browser is using html and it will become
+      confused when parsing html even within the html <code class="language-markup">&lt;pre&gt; &lt;code&gt; &lt;/code&gt; &lt;/pre&gt;</code> tags, so we use escaped characters like the ones
+      in the screenshot to represent html code.
+    </p>
+    <img class="post-img" src="images/escaped.png" alt="">
+    <p>
+      I hope this has been a valuable post on how you can start integrating code snippets into your own blog. Feel free to email me any questions or feedback.
+      Always Be Coding! 28 September 2019
+    </p>
+
+    <hr>
     <h2>Switching Gears</h2>
     <p>
       For better or worse, I have decided to scale back my daily posts—not that my posts were ever wildly long or anywhere near the length of my essays during
@@ -348,6 +445,7 @@
     <p class="copyright">© 2019 Richard Newman</p>
   </div>
   <script src="js/main.js" charset="utf-8"></script>
+  <script src="js/prism.js"></script>
 </body>
 
 </html>
