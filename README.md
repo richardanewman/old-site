@@ -1,1 +1,1 @@
-My little corner of the web.
+Old site no longer in use.
